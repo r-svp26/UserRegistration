@@ -4,6 +4,7 @@ namespace UserRegistration
 {
     /*
      * UC1-validate-user-first-name
+     * UC2-validate-user-last-name
      */
     class Program
     {
@@ -13,7 +14,7 @@ namespace UserRegistration
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            bool rs = User.ValidateFirstName();
+            bool rs = User.ValidateLastName();
             Console.WriteLine(rs);
         }    
     }
