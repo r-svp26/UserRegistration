@@ -9,7 +9,8 @@ namespace UserRegistration
      * UC4-validate-user-mobile
      * UC5-password-rule1
      * UC6-password-rule2
-     * UC-minimum-one-numeric-value
+     * UC7-minimum-one-numeric-value
+     * UC8-alteast-one-special-character
      */
     class Program
     {
@@ -19,7 +20,7 @@ namespace UserRegistration
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            bool rs = User.PasswordR3();
+            bool rs = User.PasswordR4();
             Console.WriteLine(rs);
         }    
     }

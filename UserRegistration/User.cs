@@ -14,6 +14,7 @@ namespace UserRegistration
         public const string PASSWORD_R1 = "^[a-zA-Z0-9]{8}";
         public const string PASSWORD_R2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
         public const string PASSWORD_R3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+        public const string PASSWORD_R4 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()]).{8,}$";
 
         /// <summary>
         /// valid user first name
@@ -77,6 +78,15 @@ namespace UserRegistration
         {
             Regex regex = new Regex(PASSWORD_R3);
             return regex.IsMatch("akXybxy3");
+        }
+        /// <summary>
+        /// atleast one special character
+        /// </summary>
+        /// <returns></returns>
+        public static bool PasswordR4()
+        {
+            Regex regex = new Regex(PASSWORD_R4);
+            return regex.IsMatch("akXs@bx3");
         }
     }
 }
