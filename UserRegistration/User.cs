@@ -13,6 +13,8 @@ namespace UserRegistration
         public const string  MOBILE= "^([9][1])+[ ]+[789]{1}[0-9]{9}$";
         public const string PASSWORD_R1 = "^[a-zA-Z0-9]{8}";
         public const string PASSWORD_R2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        public const string PASSWORD_R3 = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$";
+
         /// <summary>
         /// valid user first name
         /// </summary>
@@ -66,6 +68,15 @@ namespace UserRegistration
         {
             Regex regex = new Regex(PASSWORD_R2);
             return regex.IsMatch("akXyb302");
+        }
+        /// <summary>
+        /// minimum one numeric value
+        /// </summary>
+        /// <returns></returns>
+        public static bool PasswordR3()
+        {
+            Regex regex = new Regex(PASSWORD_R3);
+            return regex.IsMatch("akXybxy3");
         }
     }
 }
