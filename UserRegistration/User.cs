@@ -12,6 +12,7 @@ namespace UserRegistration
         public const string EMAIL = "^[a-zA-z]{3}([.]*[a-zA-Z])+[@][a-zA-z]+([.][a-z]{2,3})*$";
         public const string  MOBILE= "^([9][1])+[ ]+[789]{1}[0-9]{9}$";
         public const string PASSWORD_R1 = "^[a-zA-Z0-9]{8}";
+        public const string PASSWORD_R2 = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
         /// <summary>
         /// valid user first name
         /// </summary>
@@ -56,6 +57,15 @@ namespace UserRegistration
         {
             Regex regex = new Regex(PASSWORD_R1);
             return regex.IsMatch("Rkxyb302");
+        }
+        /// <summary>
+        /// minimum one character should be upper case
+        /// </summary>
+        /// <returns></returns>
+        public static bool PasswordR2()
+        {
+            Regex regex = new Regex(PASSWORD_R2);
+            return regex.IsMatch("akXyb302");
         }
     }
 }
