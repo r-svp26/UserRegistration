@@ -11,6 +11,7 @@ namespace UserRegistration
      * UC6-password-rule2
      * UC7-minimum-one-numeric-value
      * UC8-alteast-one-special-character
+     * UC9-email-validation
      */
     class Program
     {
@@ -20,8 +21,7 @@ namespace UserRegistration
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            bool rs = User.PasswordR4();
-            Console.WriteLine(rs);
+            User.ValidatingEmail();
         }    
     }
 }
