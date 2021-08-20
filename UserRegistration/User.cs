@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    class User
+    public class User
     {
         public const string FIRST_NAME = "^[A-Z][a-zA-Z]{2}";
         public const string LAST_NAME = "^[A-Z][a-zA-Z]{2}";
