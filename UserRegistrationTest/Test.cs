@@ -81,6 +81,8 @@ namespace UserRegistrationTest
         }
         [Test]
         [TestCase("abc@yahoo.com",true)]
+        [TestCase("abc.100@yahoo.com", true)]
+        [TestCase("abc-100@yahoo.com", true)]
         public void TestParameterizedTest(string email, bool expected)
         {
             bool actual = User.ValidateEmail();
