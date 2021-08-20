@@ -12,6 +12,9 @@ namespace UserRegistration
      * UC7-minimum-one-numeric-value
      * UC8-alteast-one-special-character
      * UC9-email-validation
+     * UC10-test-user-entry
+     * UC11-parameterized-test-for-user-entry
+     * UC12-handle-custom-exception
      */
     class Program
     {

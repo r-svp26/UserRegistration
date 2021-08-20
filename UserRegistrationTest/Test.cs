@@ -12,80 +12,71 @@ namespace UserRegistrationTest
         [Test]
         public void GivenFirstNameValid_ShouldReturnHappy()
         {
-            bool expected = true;
-            bool actual = User.ValidateFirstName();
+            string expected = "true";
+            string actual = User.ValidateFirstName("Ritesh");
             Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenFirstNameValid_ShouldReturnSad()
         {
-            bool expected = false;
-            bool actual = User.ValidateFirstName();
-            Assert.AreNotEqual(actual, expected);
+            string expected = "false";
+            string actual = User.ValidateFirstName("2itesh");
+            Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenLastNameValid_ShouldReturnHappy()
         {
-            bool expected = true;
-            bool actual = User.ValidateLastName();
+            string expected = "true";
+            string actual = User.ValidateLastName("Kumar");
             Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenLastNameInvalid_ShouldReturnSad()
         {
-            bool expected = false;
-            bool actual = User.ValidateLastName();
-            Assert.AreNotEqual(actual, expected);
+            string expected = "false";
+            string actual = User.ValidateLastName("kUmar");
+            Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenEmailValid_ShouldReturnHappy()
         {
-            bool expected = true;
-            bool actual = User.ValidateEmail();
+            string expected = "true";
+            string actual = User.ValidateEmail("abc-100@yahoo.com");
             Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenEmailInvalid_ShouldReturnSad()
         {
-            bool expected = false;
-            bool actual = User.ValidateEmail();
-            Assert.AreNotEqual(actual, expected);
+            string expected = "false";
+            string actual = User.ValidateEmail("rit_10@ya@gmail.com");
+            Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenMobileValid_ShouldReturnHappy()
         {
-            bool expected = true;
-            bool actual = User.ValidatePhone();
+            string expected = "true";
+            string actual = User.ValidatePhone("91 9907296689");
             Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenMobileInvalid_ShouldReturnSad()
         {
-            bool expected = false;
-            bool actual = User.ValidatePhone();
-            Assert.AreNotEqual(actual, expected);
+            string expected = "false";
+            string actual = User.ValidatePhone("100");
+            Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenPasswordValid_ShouldReturnHappy()
         {
-            bool expected = true;
-            bool actual = User.PasswordR1();
+            string expected = "true";
+            string actual = User.ValidatePassword("Rit@6341");
             Assert.AreEqual(actual, expected);
         }
         [Test]
         public void GivenPasswordInvalid_ShouldReturnSad()
         {
-            bool expected = false;
-            bool actual = User.PasswordR1();
-            Assert.AreNotEqual(actual, expected);
-        }
-        [Test]
-        [TestCase("abc@yahoo.com",true)]
-        [TestCase("abc.100@yahoo.com", true)]
-        [TestCase("abc-100@yahoo.com", true)]
-        public void TestParameterizedTest(string email, bool expected)
-        {
-            bool actual = User.ValidateEmail();
+            string expected = "false";
+            string actual = User.ValidatePassword("91 88012");
             Assert.AreEqual(actual, expected);
         }
     }
