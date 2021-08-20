@@ -79,5 +79,12 @@ namespace UserRegistrationTest
             bool actual = User.PasswordR1();
             Assert.AreNotEqual(actual, expected);
         }
+        [Test]
+        [TestCase("abc@yahoo.com",true)]
+        public void TestParameterizedTest(string email, bool expected)
+        {
+            bool actual = User.ValidateEmail();
+            Assert.AreEqual(actual, expected);
+        }
     }
 }
